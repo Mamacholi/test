@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анімація Маятника</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .pendulum {
+            position: relative;
+            width: 10px;
+            height: 200px;
+            background-color: #333; /* Стрижень маятника */
+            transform-origin: top; /* Точка обертання */
+            animation: swing 2s ease-in-out infinite;
+        }
+
+        .weight {
+            position: absolute;
+            bottom: 0;
+            left: -20px; /* Центр ваги */
+            width: 40px;
+            height: 40px;
+            background-color: #FF4500; /* Вага маятника */
+            border-radius: 50%; /* Кругла форма */
+        }
+
+        @keyframes swing {
+            0% { transform: rotate(30deg); }
+            50% { transform: rotate(-30deg); }
+            100% { transform: rotate(30deg); }
+        }
+    </style>
+</head>
+<body>
+<div class="pendulum">
+    <div class="weight"></div>
+</div>
+</body>
+</html>
